@@ -1,5 +1,12 @@
+v3.7.3
+- Fix: Builder - Offcanvas content directly visible on frontend even 'Toggle Button' component is not added in builder area.
+- Fix: Full Size & Wide Size block layout options missing from core/image block.
+- Fix: Button Preset preview not working for an edge case.
+- Fix: Global color palette - customizer preview for Elementor pages not working.
+- Fix: Customizer - Block Settings area getting irrelevant round shapes.
+
 v3.7.2
-- Fix: Incorrect Site Background Color on pages with Full Width layout. 
+- Fix: Incorrect Site Background Color on pages with Full Width layout.
 
 v3.7.1
 - Fix: Gutenberg - Group Block appearing full width on frontend.

@@ -337,23 +337,27 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 			AstraToggleSetup();
 		} else if ( 'dropdown' === mobileHeaderType ) {
 
-			var mobileDropdownContent = document.querySelector( '.ast-mobile-header-content' ),
-			    desktopDropdownContent = document.querySelector( '.ast-desktop-header-content' ),
-				mobileLinks = mobileDropdownContent.getElementsByTagName('a'),
-				desktopLinks = desktopDropdownContent.getElementsByTagName('a');
+			var mobileDropdownContent = document.querySelector( '.ast-mobile-header-content' ) || false,
+			    desktopDropdownContent = document.querySelector( '.ast-desktop-header-content' ) || false;
 
 			// Close Popup on # link click inside Popup.
-			for ( link = 0, len = mobileLinks.length; link < len; link++ ) {
-				if( null !== mobileLinks[link].getAttribute("href") && '#' == mobileLinks[link].getAttribute("href") && !mobileLinks[link].parentElement.classList.contains('menu-item-has-children') ){
-					mobileLinks[link].addEventListener( 'click', triggerToggleClose, true );
-					mobileLinks[link].headerType = 'dropdown';
+			if( mobileDropdownContent ) {
+				var mobileLinks = mobileDropdownContent.getElementsByTagName('a');
+				for ( link = 0, len = mobileLinks.length; link < len; link++ ) {
+					if( null !== mobileLinks[link].getAttribute("href") && '#' == mobileLinks[link].getAttribute("href") && !mobileLinks[link].parentElement.classList.contains('menu-item-has-children') ){
+						mobileLinks[link].addEventListener( 'click', triggerToggleClose, true );
+						mobileLinks[link].headerType = 'dropdown';
+					}
 				}
 			}
 
 			// Close Popup on # link click inside Popup.
-			for ( link = 0, len = desktopLinks.length; link < len; link++ ) {
-				desktopLinks[link].addEventListener( 'click', triggerToggleClose, true );
-				desktopLinks[link].headerType = 'dropdown';
+			if( desktopDropdownContent ) {
+				var desktopLinks = desktopDropdownContent.getElementsByTagName('a');
+				for ( link = 0, len = desktopLinks.length; link < len; link++ ) {
+					desktopLinks[link].addEventListener( 'click', triggerToggleClose, true );
+					desktopLinks[link].headerType = 'dropdown';
+				}
 			}
 
 			for ( var item = 0;  item < popupTriggerMobile.length; item++ ) {

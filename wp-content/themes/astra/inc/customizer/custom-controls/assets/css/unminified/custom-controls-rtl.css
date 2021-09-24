@@ -2620,6 +2620,12 @@ input[type="text"].select2-search__field {
   margin-top: 12px;
 }
 
+/* Customizer - builder widget area's block gets round shapes in more-settings tab */
+.customize-widgets-layout__inspector .components-circular-option-picker__option::after {
+  box-shadow: none;
+  position: unset;
+}
+
 .customize-control-ast-description .ast-description {
   font-style: italic;
 }
@@ -4450,6 +4456,12 @@ input[type="text"].select2-search__field {
 
 .block-editor-block-inspector .block-editor-block-card {
   margin-top: 12px;
+}
+
+/* Customizer - builder widget area's block gets round shapes in more-settings tab */
+.customize-widgets-layout__inspector .components-circular-option-picker__option::after {
+  box-shadow: none;
+  position: unset;
 }
 
 .customize-control-ast-description .ast-description {

@@ -120,7 +120,7 @@ class Astra_Global_Palette {
 			'currentPalette' => 'palette_1',
 			'palettes'       => array(
 				'palette_1' => array(
-					'#0274be',
+					'#0170B9',
 					'#3a3a3a',
 					'#3a3a3a',
 					'#4B4F58',
@@ -131,7 +131,7 @@ class Astra_Global_Palette {
 					'#000000',
 				),
 				'palette_2' => array(
-					'#0274be',
+					'#0170B9',
 					'#3a3a3a',
 					'#3a3a3a',
 					'#4B4F58',
@@ -142,7 +142,7 @@ class Astra_Global_Palette {
 					'#000000',
 				),
 				'palette_3' => array(
-					'#0274be',
+					'#0170B9',
 					'#3a3a3a',
 					'#3a3a3a',
 					'#4B4F58',
